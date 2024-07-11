@@ -1,0 +1,47 @@
+class SquareStarMatrix {
+    /**
+     * NWANMADU Chukwuebuka E
+     * Recursive Program in Java to implement Rectangular Star Square Matrix
+     * Written on 10th July, 2024
+     * For SUMAS, 2nd Year Class
+     * COS 264 Computer Programming 2
+     */
+public static void main(String[] args)
+	{
+        // TODO code application logic here
+        outer(1);
+    }
+
+static void star()
+    {
+    System.out.print('*');
+    }
+
+static void inner(int j)
+  {
+    if(j == 5)
+    {
+        star();
+    }
+ else
+ 	{
+        star ();
+        inner(j+1);
+ 	}
+}
+
+static void outer(int i)
+    {
+    if(i == 5)
+    {
+       inner(1);
+       System.out.println();
+    }
+ else
+    {
+       inner(1);
+       System.out.println();
+       outer(i+1);
+ 	}
+}
+}
