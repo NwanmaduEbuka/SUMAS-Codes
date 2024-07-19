@@ -1,0 +1,51 @@
+class LowerRighAngleHead {
+
+      /** Nwanmadu Chukwuebuka, E.
+    A lecturer, Dept of Computer Sc., SUMAS and Teacher at Lady Ibiam Girls' Secondary School, Enugu.
+       Tail Recursion
+       18th July, 2024**/
+
+    /**
+     * @param args the command line arguments
+     */
+public static void main(String[] args)
+	{
+        // TODO code application logic here
+        outer(5);
+    }
+static int temp;
+
+static void star()
+    {
+        System.out.print('*');
+    }
+
+static void inner(int j)
+    	{
+    if(j== 1)
+    	{
+		star();
+		}
+ 	else
+    	{
+        star();
+        inner(j-1);
+ 		}
+    }
+static void outer( int i)
+    {
+        temp = i;
+        if( i == 1)
+        {
+            inner(6-temp);
+            System.out.println();
+        }
+ else
+        {
+            inner(6-temp);
+	    System.out.println();
+            outer (i-1);
+        }
+
+    }
+}
